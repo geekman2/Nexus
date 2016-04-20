@@ -10,7 +10,6 @@ import taggit.managers
 
 
 class Migration(migrations.Migration):
-
     initial = True
 
     dependencies = [
@@ -28,7 +27,9 @@ class Migration(migrations.Migration):
                 ('created_date', models.DateTimeField(default=django.utils.timezone.now)),
                 ('published_date', models.DateTimeField(blank=True, null=True)),
                 ('author', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
-                ('tags', taggit.managers.TaggableManager(help_text='A comma-separated list of tags.', through='taggit.TaggedItem', to='taggit.Tag', verbose_name='Tags')),
+                ('tags', taggit.managers.TaggableManager(help_text='A comma-separated list of tags.',
+                                                         through='taggit.TaggedItem', to='taggit.Tag',
+                                                         verbose_name='Tags')),
             ],
         ),
     ]
