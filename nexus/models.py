@@ -8,7 +8,7 @@ from taggit.managers import TaggableManager
 class Post(models.Model):
     author = models.ForeignKey('auth.User')
     title = models.CharField(max_length=200)
-    link = models.TextField()
+    link = models.CharField(max_length=2000)
     created_date = models.DateTimeField(
         default=timezone.now)
     published_date = models.DateTimeField(

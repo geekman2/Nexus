@@ -12,11 +12,33 @@
 
 <div class="container">
     <ul class="nav nav-tabs">
-        <li role="presentation" class="active"><a data-toggle="tab" href="#">Read</a></li>
+        <li role="presentation" class="active"><a data-toggle="tab" href="#readpane">Read</a></li>
         <li role="presentation"><a data-toggle="tab" href="#">Gawk</a></li>
         <li role="presentation"><a data-toggle="tab" href="#">Talk</a></li>
         <li role="presentation"><a data-toggle="tab" href="#">Shop</a></li>
     </ul>
+    <div class="tab-content">
+        <div id="readpane" class="tab-pane fade in active">
+            {% for post in range %}
+                    <div class="row">
+                        <div class="col-xs-6 col-md-3">
+                          <a href="#" class="thumbnail">
+                            <div>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris varius fermentum lacus,
+                                non ornare ipsum accumsan et. Suspendisse sodales tempor viverra. Sed faucibus quis i
+                                psum eleifend laoreet. Nunc non ante condimentum ipsum tincidunt pretium. Duis varius
+                                elit ut interdum imperdiet. Sed auctor est et nisi maximus, at blandit massa malesuada.
+                                Nunc tempor feugiat sollicitudin. Nullam mollis varius porttitor. Aliquam rhoncus elit
+
+                            </div>
+                          </a>
+                        </div>
+                    </div>
+            {% endfor %}
+
+        </div>
+    </div>
 </div>
+
 
 {% endblock %}
