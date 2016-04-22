@@ -4,7 +4,7 @@
 <div class="jumbotron">
 
     <div class="container">
-        <h1>Percy Jackson Nexus</h1>
+        <h1>Percy Jackson Domain</h1>
         <p>The Hub for all things Percy Jackson</p>
     </div>
 
@@ -13,32 +13,94 @@
 <div class="container">
     <ul class="nav nav-tabs">
         <li role="presentation" class="active"><a data-toggle="tab" href="#readpane">Read</a></li>
-        <li role="presentation"><a data-toggle="tab" href="#">Gawk</a></li>
-        <li role="presentation"><a data-toggle="tab" href="#">Talk</a></li>
-        <li role="presentation"><a data-toggle="tab" href="#">Shop</a></li>
+        <li role="presentation"><a data-toggle="tab" href="#gawkpane">Gawk</a></li>
+       <!-- <li role="presentation"><a data-toggle="tab" href="#talkpane">Talk</a></li> -->
+        <li role="presentation"><a data-toggle="tab" href="#shoppane">Shop</a></li>
     </ul>
+
     <div class="tab-content">
         <div id="readpane" class="tab-pane fade in active">
-            {% for post in range %}
-                    <div class="row">
+            <div class="row" >
+                {% for story in stories %}
                         <div class="col-xs-6 col-md-3">
-                          <a href="#" class="thumbnail">
-                            <div>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris varius fermentum lacus,
-                                non ornare ipsum accumsan et. Suspendisse sodales tempor viverra. Sed faucibus quis i
-                                psum eleifend laoreet. Nunc non ante condimentum ipsum tincidunt pretium. Duis varius
-                                elit ut interdum imperdiet. Sed auctor est et nisi maximus, at blandit massa malesuada.
-                                Nunc tempor feugiat sollicitudin. Nullam mollis varius porttitor. Aliquam rhoncus elit
+                          <a href="{{ story.link }}" class="thumbnail" style="text-decoration:none;color:black;">
+                            <div class="">
+                                <h3>{{ story.title }}</h3>
+                                <p>
+                                    {{ story.summary }}
+                                </p>
+                            </div>
+                          </a>
+                        </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div id="gawkpane" class="tab-pane fade in">
+            <div class="row">
+                {% for pic in art %}
+                        <div class="col-xs-6 col-md-4">
+                          <a href="{{ pic.link }}" class="thumbnail" style="text-decoration:none;color:black;">
+                            <div class="">
+                                <h3>{{ pic.title }}</h3>
+                                <img src="{{ pic.link }}" style="max-width:100%;max-height:100%" >
 
                             </div>
                           </a>
                         </div>
-                    </div>
-            {% endfor %}
+                {% endfor %}
+            </div>
+        </div>
 
+
+        <!--
+        Talk Pane removed for now due to the massively different way it operates
+        <div id="talkpane" class="tab-pane fade in">
+            <div class="row">
+                {% for post in range %}
+                        <div class="col-xs-6 col-md-4">
+                          <a href="#" class="thumbnail" style="text-decoration:none;color:black;">
+                            <div class="">
+                                <h1>{{ tab }}</h1>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris varius fermentum lacus,
+                                non ornare ipsum accumsan et. Suspendisse sodales tempor viverra. Sed faucibus quis
+                                ipsum eleifend laoreet. Nunc non ante condimentum ipsum tincidunt pretium. Duis varius
+                                elit ut interdum imperdiet. Sed auctor est et nisi maximus, at blandit massa malesuada.
+                                Nunc tempor feugiat sollicitudin. Nullam mollis varius porttitor.
+
+                            </div>
+                          </a>
+                        </div>
+                {% endfor %}
+            </div>
+        </div>
+        -->
+
+        <div id="shoppane" class="tab-pane fade in">
+            <div class="row">
+                {% for post in range %}
+                        <div class="col-xs-6 col-md-4">
+                          <a href="#" class="thumbnail" style="text-decoration:none;color:black;">
+                            <div class="">
+                                <h1>{{ tab }}</h1>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris varius fermentum lacus,
+                                non ornare ipsum accumsan et. Suspendisse sodales tempor viverra. Sed faucibus quis
+                                ipsum eleifend laoreet. Nunc non ante condimentum ipsum tincidunt pretium. Duis varius
+                                elit ut interdum imperdiet. Sed auctor est et nisi maximus, at blandit massa malesuada.
+                                Nunc tempor feugiat sollicitudin. Nullam mollis varius porttitor.
+
+                            </div>
+                          </a>
+                        </div>
+                {% endfor %}
+            </div>
         </div>
     </div>
+
+
+
+
 </div>
 
 
-{% endblock %}
+{% endblock content %}
