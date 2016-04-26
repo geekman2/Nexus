@@ -6,7 +6,7 @@ from taggit.managers import TaggableManager
 
 # Create your models here.
 class Post(models.Model):
-    author = models.ForeignKey('auth.User')
+    uploader = models.ForeignKey('auth.User')
     title = models.CharField(max_length=200)
     link = models.URLField(max_length=2000)
     summary = models.TextField(max_length=500,
