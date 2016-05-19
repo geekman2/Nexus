@@ -11,93 +11,60 @@
 </div>
 
 <div class="container">
-    <ul class="nav nav-tabs">
-        <li role="presentation" class="active"><a data-toggle="tab" href="#readpane">Read</a></li>
-        <li role="presentation"><a data-toggle="tab" href="#gawkpane">Gawk</a></li>
-       <!-- <li role="presentation"><a data-toggle="tab" href="#talkpane">Talk</a></li> -->
-        <li role="presentation"><a data-toggle="tab" href="#shoppane">Shop</a></li>
-    </ul>
 
-    <div class="tab-content">
-        <div id="readpane" class="tab-pane fade in active">
-            <div class="row" >
-                {% for story in stories %}
-                        <div class="col-xs-6 col-md-3">
-                          <a href="{{ story.link }}" class="thumbnail" style="text-decoration:none;color:black;">
-                            <div class="">
-                                <h3>{{ story.title }}</h3>
-                                <p>
-                                    {{ story.summary }}
-                                </p>
-                            </div>
-                          </a>
-                        </div>
-                {% endfor %}
-            </div>
-        </div>
+     <div class="col-sm-4 col-md-4">
+		<div class="thumbnail tile tile-large tile-blue">
+			<a href="#" class="fa-links">
+				<h1>Read</h1>
+				<i class="fa fa-5x fa-book"></i>
+			</a>
+		</div>
+	 </div>
 
-        <div id="gawkpane" class="tab-pane fade in">
-            <div class="row">
-                {% for pic in art %}
-                        <div class="col-xs-6 col-md-4">
-                          <a href="{{ pic.link }}" class="thumbnail" style="text-decoration:none;color:black;">
-                            <div class="">
-                                <h3>{{ pic.title }}</h3>
-                                <img src="{{ pic.link }}" style="max-width:100%;max-height:100%" >
+	<div class="col-sm-4 col-md-4">
+		<div class="thumbnail tile tile-large tile-orange">
+			<a href="#" class="fa-links">
+				<h1>Talk</h1>
+				<i class="fa fa-5x fa-comments"></i>
+			</a>
+		</div>
+	 </div>
 
-                            </div>
-                          </a>
-                        </div>
-                {% endfor %}
-            </div>
-        </div>
+	<div class="col-sm-4 col-md-4">
+		<div class="thumbnail tile tile-large tile-amethyst">
+			<a href="#" class="fa-links">
+				<h1>Gawk</h1>
+				<i class="fa fa-5x fa-image"></i>
+			</a>
+		</div>
+	 </div>
 
+	<div class="col-sm-6 col-md-4">
+		<div class="thumbnail tile tile-large tile-pink">
+			<a href="#" class="fa-links">
+				<h1>Shop</h1>
+				<i class="fa fa-5x fa-shopping-bag"></i>
+			</a>
+		</div>
+	 </div>
 
-        <!--
-        Talk Pane removed for now due to the massively different way it operates
-        <div id="talkpane" class="tab-pane fade in">
-            <div class="row">
-                {% for post in range %}
-                        <div class="col-xs-6 col-md-4">
-                          <a href="#" class="thumbnail" style="text-decoration:none;color:black;">
-                            <div class="">
-                                <h1>{{ tab }}</h1>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris varius fermentum lacus,
-                                non ornare ipsum accumsan et. Suspendisse sodales tempor viverra. Sed faucibus quis
-                                ipsum eleifend laoreet. Nunc non ante condimentum ipsum tincidunt pretium. Duis varius
-                                elit ut interdum imperdiet. Sed auctor est et nisi maximus, at blandit massa malesuada.
-                                Nunc tempor feugiat sollicitudin. Nullam mollis varius porttitor.
+	<div class="col-sm-4 col-md-4">
+		<div class="thumbnail tile tile-large tile-red">
+			<a href="#" class="fa-links">
+				<h1>Connect</h1>
+				<i class="fa fa-5x fa-share-alt"></i>
+			</a>
+		</div>
+	 </div>
 
-                            </div>
-                          </a>
-                        </div>
-                {% endfor %}
-            </div>
-        </div>
-        -->
-
-        <div id="shoppane" class="tab-pane fade in">
-            <div class="row">
-                {% for post in range %}
-                        <div class="col-xs-6 col-md-4">
-                          <a href="#" class="thumbnail" style="text-decoration:none;color:black;">
-                            <div class="">
-                                <h1>{{ tab }}</h1>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris varius fermentum lacus,
-                                non ornare ipsum accumsan et. Suspendisse sodales tempor viverra. Sed faucibus quis
-                                ipsum eleifend laoreet. Nunc non ante condimentum ipsum tincidunt pretium. Duis varius
-                                elit ut interdum imperdiet. Sed auctor est et nisi maximus, at blandit massa malesuada.
-                                Nunc tempor feugiat sollicitudin. Nullam mollis varius porttitor.
-
-                            </div>
-                          </a>
-                        </div>
-                {% endfor %}
-            </div>
-        </div>
-    </div>
-
-
+	<div class="col-sm-4 col-md-4">
+		<div class="thumbnail tile tile-large tile-green">
+			<a href="#" class="fa-links">
+				<h1>Explore</h1>
+				<i class="fa fa-5x fa-binoculars"></i>
+			</a>
+		</div>
+	 </div>
 
 
 </div>
